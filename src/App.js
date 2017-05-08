@@ -16,12 +16,12 @@ export default () => (
   <MuiThemeProvider muiTheme={getTheme(lightTheme)}>
     <section role="main">
       <header>
-        {/*<AppBar />*/}
+        <AppBar />
       </header>
       <main>
-        {/*<aside>*/}
-          {/*Side Nav*/}
-        {/*</aside>*/}
+        <aside>
+          Side Nav
+        </aside>
         {/*<Drawer open={true}>*/}
           {/*<MenuItem>Mini Figures</MenuItem>*/}
           {/*<MenuItem>About</MenuItem>*/}
@@ -32,13 +32,13 @@ export default () => (
         </article>
       </main>
       <footer>
-        {/*<nav>*/}
-          {/*<ul>*/}
-            {/*<li><a href="#">Footer Url</a></li>*/}
-            {/*<li><a href="#">Footer Url</a></li>*/}
-            {/*<li><a href="#">Footer Url</a></li>*/}
-          {/*</ul>*/}
-        {/*</nav>*/}
+        <nav>
+          <ul>
+            <li><a href="#">Footer Url</a></li>
+            <li><a href="#">Footer Url</a></li>
+            <li><a href="#">Footer Url</a></li>
+          </ul>
+        </nav>
       </footer>
     </section>
   </MuiThemeProvider>

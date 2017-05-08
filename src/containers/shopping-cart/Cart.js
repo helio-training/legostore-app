@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 export default class extends Component {
 
+
   render() {
     return (
       <div>
-        <h1>Cart Summary</h1>
+        <h1>Summary</h1>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ProductItem from './ProductItem';
+import ProductItem from '../../components/products/ProductItem';
 
 export default class extends Component {
 
@@ -20,11 +20,7 @@ export default class extends Component {
       .catch(console.error);
   }
 
-  // Called when the state changes...
   render() {
-
-    // Why is it bad to put fetch in here....?
-
     return (
       <div>
         <h1>Products</h1>
