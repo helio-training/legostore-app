@@ -1,27 +1,19 @@
 import React from 'react';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
-import Products from './containers/products/Products';
-import ProductDetails from './containers/products/ProductDetails';
+import Figures from './containers/products/Figures';
+import Figure from './containers/products/Figure';
 import Cart from './containers/shopping-cart/Cart';
 import { NotFound } from './containers/shared/Common';
-
-// const BogusComponent = () => (<div><h1>Super Duper Bogus</h1></div>);
 
 export default () => (
   <Router>
     <Switch>
-      <Route path="/" exact component={Products} />
+      <Route path="/" exact component={Figures} />
       <Route path="/cart" exact component={Cart} />
-      <Route path="/products/:id" component={ProductDetails} />
-      {/*<Route path="/bogus" component={BogusComponent} />*/}
-      <Redirect from="/products" to="/" />
+      <Route path="/figures/:id" component={Figure} />
+      <Redirect from="/figures" to="/" />
       <Route component={NotFound} />
     </Switch>
   </Router>

@@ -1,0 +1,8 @@
+@import 'variables';
+
+article {
+  background: $grey-50;
+  order: 99;
+  width: 100%;
+  padding: $padding-default;
+}

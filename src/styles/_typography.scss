@@ -1,0 +1,42 @@
+@import 'variables';
+
+$font-family: 'Roboto', sans-serif;
+
+html {
+  font-family: $font-family;
+  color: $grey-900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 175%;
+}
+
+h3 {
+  font-size: 150%;
+}
+
+h4 {
+  font-size: 140%;
+}
+
+h5 {
+  font-size: 130%;
+}
+
+h6 {
+  font-size: 120%;
+}
+
+.default-casing {
+  text-transform: none;
+}

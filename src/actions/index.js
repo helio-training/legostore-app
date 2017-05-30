@@ -1,5 +1,5 @@
-import products from './products';
+import figures from './figures';
 
 export {
-  products
+  figures
 };

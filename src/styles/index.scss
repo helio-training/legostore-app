@@ -1,0 +1,18 @@
+@import 'globals';
+@import 'typography';
+
+@import 'side-navigation';
+@import 'main-content';
+
+[role="main"] {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  main {
+    display: flex;
+    width: 100vw;
+    flex-grow: 3;
+  }
+}
