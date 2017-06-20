@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-export default class extends Component {
 
-  render() {
-    return (
-      <div>
-        <h1>Product Details</h1>
-      </div>
-    );
-  }
-}
+export default ({ figure, handleClick }) => (
+  <section role="search-item" className="figure" onClick={handleClick}>
+    <div><img src={figure.imageUrl} alt={figure.name} /></div>
+    <h4>{figure.name}</h4>
+    <div className="price">$ {figure.price}</div>
+  </section>
+)

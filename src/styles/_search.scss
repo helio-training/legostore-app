@@ -1,0 +1,105 @@
+@import 'variables';
+
+$min: 200px;
+$max: 400px;
+
+$padding-2x: $padding-default * 2;
+$padding-4x: $padding-2x * 2;
+
+.box-shadow {
+  border: 1px solid $grey-300;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+}
+
+[role="figures"] {
+  padding: $padding-default;
+}
+
+[role="query"] {
+  padding: $padding-default;
+  margin-bottom: $padding-2x;
+}
+
+.search-bar {
+  padding: $padding-default;
+  margin-bottom: $padding-default;
+}
+
+[role="search-results"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  [role="search-item"] {
+    //max-width: $max;
+    //min-width: $min;
+    width: 350px;
+    height: 350px;
+    padding: $padding-default;
+    background: $white;
+    margin: $padding-default;
+    text-align: right;
+    align-self: auto;
+    flex-grow: 1;
+    flex-basis: 300px;
+
+    border: 1px solid $grey-300;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+
+    h4 {
+      text-transform: uppercase;
+      margin-top: $padding-default * 2;
+    }
+
+    .price {
+      font-weight: 400;
+      color: $orange-500;
+      font-size: 115%;
+      margin-top: 6px;
+      font-style: italic;
+    }
+
+    img {
+      max-height: 300px;
+      max-width: 300px;
+
+    }
+
+    &:hover {
+      border: 1px solid $grey-900;
+    }
+
+  }
+
+}
+
+[role="details"] {
+  h2 {
+    margin-bottom: $padding-default;
+    font-size: 200%;
+    padding: $padding-default $padding-default 0;
+  }
+
+  [role="figure-details"] {
+    background: $grey-200;
+    padding: $padding-default;
+
+    img {
+      width: 100%;
+      @extend .box-shadow;
+    }
+
+    .description {
+      margin-top: $padding-2x;
+      line-height: 150%;
+    }
+
+    .action {
+      position: absolute;
+      right: 5px;
+      top: -25px;
+    }
+  }
+}
