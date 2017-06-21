@@ -33,8 +33,6 @@ $padding-4x: $padding-2x * 2;
   align-items: flex-start;
 
   [role="search-item"] {
-    //max-width: $max;
-    //min-width: $min;
     width: 350px;
     height: 350px;
     padding: $padding-default;

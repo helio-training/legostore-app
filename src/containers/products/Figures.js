@@ -1,14 +1,14 @@
 import {
   Drawer,
+  FloatingActionButton,
   Paper,
   TextField,
-  FloatingActionButton,
-} from 'material-ui'
-import React, { Component } from 'react'
+} from 'material-ui';
 
 import ContentAdd from 'material-ui/svg-icons/content/add';
+import React, { Component } from 'react';
 
-import Figure from './Figure'
+import Figure from './Figure';
 
 const FIGURES = [
   {
@@ -133,7 +133,7 @@ Abraham Lincoln is full of good and fair advice, so his fellow Master Builders o
     imageUrl: 'https://lc-www-live-s.legocdn.com/r/www/r/catalogs/-/media/catalogs/characters/minifigures/the%20lego%20movie/71004_detail_abrahamlincoln.jpg?l.r2=-265194151',
     isActive: true,
   },
-]
+];
 
 class Figures extends Component {
 
@@ -141,27 +141,27 @@ class Figures extends Component {
     figures: FIGURES,
     query: '',
     showDetails: false,
-  }
+  };
 
   renderFigure(figure) {
-    const { showDetails } = this.state
+    const { showDetails } = this.state;
 
     return (
       <Figure figure={figure} key={figure.id} handleClick={e => this.setState({
         showDetails: !showDetails,
         selectedFigure: figure,
       }) } />
-    )
+    );
   }
 
   renderDetails() {
-    const { selectedFigure } = this.state
+    const { selectedFigure } = this.state;
     return selectedFigure ? (
       <section role="details">
         <h2>{selectedFigure.name}</h2>
         <section role="figure-details">
           <div><img src={selectedFigure.imageUrl} alt={selectedFigure.name} /></div>
-          <div className="description" dangerouslySetInnerHTML={{__html: selectedFigure.description}} />
+          <div className="description" dangerouslySetInnerHTML={{ __html: selectedFigure.description }} />
         </section>
         <FloatingActionButton className="action">
           <ContentAdd />
@@ -171,14 +171,13 @@ class Figures extends Component {
         </div>
 
       </section>
-    ) : null
+    ) : null;
   }
 
-
   render() {
-    const { query = '' } = this.state
-    const expression = new RegExp(query, 'i')
-    const figures = this.state.figures.filter(f => f.name.match(expression) || f.price.toString().startsWith(query))
+    const { query = '' } = this.state;
+    const expression = new RegExp(query, 'i');
+    const figures = this.state.figures.filter(f => f.name.match(expression) || f.price.toString().startsWith(query));
 
     return (
       <section role="figures">
@@ -195,9 +194,9 @@ class Figures extends Component {
           {this.renderDetails()}
         </Drawer>
       </section>
-    )
+    );
   }
 }
 
 
-export default Figures
+export default Figures;
