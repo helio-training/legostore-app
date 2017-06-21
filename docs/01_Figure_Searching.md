@@ -10,7 +10,7 @@ This is a mock up of what it should look like (feel free to embellish) - https:/
 
 ### Features & Requirements
 
-Use the data in the `/docs/datasets/figures.js` file.  Create an application called `legostore-app` using the create-react-app, initialize git and publish your code to your github profile.
+Use the data in the [`/docs/datasets/figures.js`](https://github.com/helio-training/legostore-app/blob/master/docs/datasets/figures.js) file.  Create an application called `legostore-app` using the create-react-app, initialize git and publish your code to your github profile.
 
 **Build an application that can do:**
 
