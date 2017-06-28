@@ -29,17 +29,3 @@ Here are a couple of pointers to make sure you will be successful.
 * The mentor will be looking at your code to ensure that map, filter, and reduce is used (where appropriate)
 * This repository can be used as an example, though, I'll utilize different patterns and practices to demonstrate various topics--some will not be optimal, but more for demonstration purposes (make sure you understand what pieces do what when utilizing for example code)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

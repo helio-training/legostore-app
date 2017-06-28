@@ -182,15 +182,25 @@ class Figures extends Component {
     return (
       <section role="figures">
         <Paper zDepth={1} role="query">
-          <TextField type="search" value={this.state.query} onChange={e => this.setState({ query: e.target.value })} fullWidth={true} hintText="Filter by a name or a price..." />
+          <TextField
+            type="search"
+            value={query}
+            onChange={e => this.setState({ query: e.target.value })}
+            fullWidth={true}
+            hintText="Filter by a name or a price..." />
         </Paper>
         <section role="search-results">
           { figures.map(figure => this.renderFigure(figure))}
         </section>
-        <Drawer width={600} openSecondary={true} docked={false} open={this.state.showDetails} onRequestChange={(showDetails) => this.setState({
-          showDetails,
-          selectedFigure: null,
-        })}>
+        <Drawer width={600}
+          openSecondary={true}
+          docked={false}
+          open={this.state.showDetails}
+          onRequestChange={(showDetails) =>
+            this.setState({
+              showDetails,
+              selectedFigure: null,
+            })}>
           {this.renderDetails()}
         </Drawer>
       </section>
