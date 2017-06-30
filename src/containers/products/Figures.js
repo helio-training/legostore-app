@@ -7,6 +7,7 @@ import {
 
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import React, { Component } from 'react';
+import Cart from '../../storage/cart';
 
 import Figure from './Figure';
 
@@ -147,10 +148,13 @@ class Figures extends Component {
     const { showDetails } = this.state;
 
     return (
-      <Figure figure={figure} key={figure.id} handleClick={e => this.setState({
-        showDetails: !showDetails,
-        selectedFigure: figure,
-      }) } />
+      <Figure
+        figure={figure}
+        key={figure.id}
+        handleClick={e => this.setState({
+          showDetails: !showDetails,
+          selectedFigure: figure,
+        }) } />
     );
   }
 
@@ -163,7 +167,7 @@ class Figures extends Component {
           <div><img src={selectedFigure.imageUrl} alt={selectedFigure.name} /></div>
           <div className="description" dangerouslySetInnerHTML={{ __html: selectedFigure.description }} />
         </section>
-        <FloatingActionButton className="action">
+        <FloatingActionButton className="action" onTouchTap={e => Cart.add(selectedFigure) }>
           <ContentAdd />
         </FloatingActionButton>
         <div className="price">

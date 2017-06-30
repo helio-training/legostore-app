@@ -7,7 +7,7 @@ import {
 
 const URI = `https://api.graph.cool/relay/v1/figures`
 
-const store = new Store(new RecordSource())
+const store = new Store(new RecordSource());
 
 const network = Network.create((operation, variables) => {
 
